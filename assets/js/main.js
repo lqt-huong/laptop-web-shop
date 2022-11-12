@@ -1,279 +1,260 @@
 var arrProduct = [];
-function createProduct()
-{
-    if(localStorage.getItem('product') == null)
-    {
+function createProduct() {
+    if (localStorage.getItem('product') == null) {
 
         arrProduct = [
             {
                 id: "0",
-                img:'macbook1.jpg',
-                name: 'Macbook',
-                prices: '1200',
-                type: "macbook"
+                img: 'apple1.png',
+                name: 'Macbook Air 13" 2020 - M1 256GB',
+                prices: '22490000',
+                type: "apple"
             },
-        
+
             {
                 id: "1",
-                img: '13promax.jpg',
-                name: 'IPHONE 13 Pro max new',
-                prices: '2000',
-                type: "iphone"
+                img: 'apple2.png',
+                name: 'Macbook Air M2 13.6" 2022 - 512GB',
+                prices: '36590000',
+                type: "apple"
             },
-        
-            { 
+
+            {
                 id: "2",
-                img: '13.jpg',
-                name: 'IPHONE 13 64GB new',
-                prices: '1000',
-                type: "iphone"
+                img: 'apple3.png',
+                name: 'Macbook Pro M2 13" 2022 - 256GB',
+                prices: '30490000',
+                type: "apple"
             },
-        
+
             {
                 id: "3",
-                img: '131mobile1.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '800',
-                type: "iphone"
+                img: 'apple4.png',
+                name: 'Macbook Pro M2 13" 2022 - 512GB',
+                prices: '35190000',
+                type: "apple"
             },
-        
+
             {
                 id: "4",
-                img: '131mobile2.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '900',
-                type: "iphone"
+                img: 'apple5.png',
+                name: 'Apple M1 - MacBook Pro 13" 256GB 2020',
+                prices: '27890000',
+                type: "apple"
             },
-            
+
             {
                 id: "5",
-                img: '131mobile3.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1000',
-                type: "iphone"
+                img: 'apple6.png',
+                name: 'Macbook Pro 14" 2021 - M1 Pro 14 Core GPU/512GB',
+                prices: '45990000',
+                type: "apple"
             },
-        
+
             {
                 id: "6",
-                img: '131mobile4.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1100',
-                type: "iphone"
+                img: 'apple7.png',
+                name: 'Macbook Pro 16" 2021 - M1 Max 32 Core GPU/1TB',
+                prices: '82590000',
+                type: "apple"
             },
-        
+
             {
                 id: "7",
-                img: '131mobile5.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1200',
-                type: "iphone"
+                img: 'apple8.png',
+                name: 'Macbook Pro 16" 2021 - M1 Pro 16 Core GPU/512GB',
+                prices: '57590000',
+                type: "apple"
             },
-        
+
             {
                 id: "8",
-                img: '13mini.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1300',
-                type: "iphone"
+                img: 'dell1.png',
+                name: 'Dell Inspiron 15 3511 P112F001FBL I5-1135G7/8GB/512GB/15.6',
+                prices: '14990000',
+                type: "dell"
             },
-        
-            
+
+
             {
                 id: "9",
-                img: 'macbook1.jpg',
-                name: 'MacBook Pro 13" 2020 Touch Bar M1 256GB',
-                prices: '2400',
-                type: "macbook"
+                img: 'dell2.png',
+                name: 'Dell Inspiron 16 5620 i5P165W11SLU i5-1240P/16GB/512GB/Intel Iris Xe/16.0 inch FHD',
+                prices: '22590000',
+                type: "dell"
             },
-        
+
             {
                 id: "10",
-                img: 'macbook2.jpg',
-                name: 'MacBook Pro 16" 2019 Touch Bar 2.6GHz Core i7 512GB',
-                prices: '2600',
-                type: "macbook"
+                img: 'dell3.png',
+                name: 'Dell Inspiron 16 5620-N6I7110W1, i7-1255U/8GB/512GB/16FHD',
+                prices: '22490000',
+                type: "dell"
             },
-        
+
             {
                 id: "11",
-                img: 'macbook3.jpg',
-                name: 'MacBook Air 13" 2020 M1 16GB/256GB',
-                prices: '2900',
-                type: "macbook"
+                img: 'dell4.png',
+                name: 'Dell Inspiron 15 3520-71001747- i7-1255U/8GB/512GB SSD,/15.6"',
+                prices: '21390000',
+                type: "dell"
             },
-        
+
             {
                 id: "12",
-                img: 'macbook4.jpg',
-                name: 'MacBook Pro 13" 2020 Touch Bar M1 16GB/256GB',
-                prices: '1900',
-                type: "macbook"
+                img: 'dell5.png',
+                name: 'Dell Vostro 5620 V6I5001W1, i5-1240P/8GB/256GB/16FHD',
+                prices: '19390000',
+                type: "dell"
             },
-        
+
             {
                 id: "13",
-                img: 'macbook5.jpg',
-                name: 'MacBook Pro 14" 2021 M1 Pro',
-                prices: '1399',
-                type: "macbook"
+                img: 'dell6.png',
+                name: 'Dell Vostro 5620 P117F001AGR i7-1260P/16GB/512GB/Iris Xe Graphics/16 inch FHD',
+                prices: '25990000',
+                type: "dell"
             },
-        
+
             {
                 id: "14",
-                img: 'macbook6.jpg',
-                name: 'MacBook Pro 13" 2020 Touch Bar 2.0GHz Core i5 512GB',
-                prices: '1499',
-                type: "macbook"
+                img: 'asus1.png',
+                name: 'Asus Zenbook UX482EA-KA397W - (i5-1135G7/8GB/512GB/14.0" FHD/WiFi6/Win 11)',
+                prices: '27990000',
+                type: "asus"
             },
-        
+
             {
                 id: "15",
-                img: 'macbook7.jpg',
-                name: 'MacBook Pro 13" 2020 Touch Bar M1 256GB',
-                prices: '999',
-                type: "macbook"
+                img: 'asus2.png',
+                name: 'ASUS ZenBook 14 UX3402ZA-KM221W, i7-1260P/16GB/512GB/14OLED/Win11/Blue',
+                prices: '28790000',
+                type: "asus"
             },
-        
+
             {
                 id: "16",
-                img: 'macbook7.jpg',
-                name: 'MacBook Pro 13" 2020 Touch Bar M1 256GB',
-                prices: '1099',
-                type: "macbook"
+                img: 'asus3.png',
+                name: 'ASUS ZenBook UP5401ZA-KN005W- i5-12500H/8GB/512GB/14WQ+_T/OLED/W11H/Xám',
+                prices: '23290000',
+                type: "asus"
             },
-        
+
             {
                 id: "17",
-                img: 'ipad1.jpg',
-                name: 'Máy tính bảng iPad Pro M1 12.9 inch WiFi Cellular 256GB (2021)',
-                prices: '1000',
-                type: "ipad"
+                img: 'asus4.png',
+                name: 'Laptop Gaming Asus Rog Strix G15 G513RC HN038W - R7-6800H/8GB/512GB/4GB RTX3050/15.6 FHD/WIN11/XÁM',
+                prices: '24490000',
+                type: "asus"
             },
-        
+
             {
                 id: "18",
-                img: 'ipad2.jpg',
-                name: 'Máy tính bảng iPad Pro M1 12.9 inch WiFi Cellular 256GB (2021)',
-                prices: '1400',
-                type: "ipad"
+                img: 'asus5.png',
+                name: 'Laptop Gaming Asus Rog Strix G15 G513IM - HN008W - R7-4800H/16GB/512GB/RTX3060/15.6FHD/Win11/Xám',
+                prices: '27490000',
+                type: "asus"
             },
-        
+
             {
                 id: "19",
-                img: 'ipad3.jpg',
-                name: 'Máy tính bảng iPad Pro M1 12.9 inch WiFi Cellular 256GB (2021)',
-                prices: '1600',
-                type: "ipad"
+                img: 'asus6.png',
+                name: 'ASUS TUF Gaming A15 FA507RC-HN051W, R7-6800H/8GB/512GB/15.6FHD/144Hz/RTX3050/W11SL/Xám',
+                prices: '22990000',
+                type: "asus"
             },
-        
+
             {
                 id: "20",
-                img: 'ipad4.jpg',
-                name: 'Máy tính bảng iPad Pro M1 12.9 inch WiFi Cellular 256GB (2021)',
-                prices: '1700',
-                type: "ipad"
+                img: 'asus7.png',
+                name: 'ASUS TUF Gaming FX506HM-HN366W, i7-11800H/8GB/512GB/RTX3060/15.6FHD144Hz/W11SL/Đen',
+                prices: '27890000',
+                type: "asus"
             },
-        
+
             {
                 id: "21",
-                img: 'ipad5.jpg',
-                name: 'Máy tính bảng iPad Pro M1 12.9 inch WiFi Cellular 256GB (2021)',
-                prices: '2100',
-                type: "ipad"
+                img: 'asus8.png',
+                name: 'ASUS Gaming TUF Dash F15 FX517ZE-HN045W (i5-12450H/8GB/512GB/3050Ti 4GB15.6inchFHD/ Win11',
+                prices: '24190000',
+                type: "asus"
             },
-        
+
             {
                 id: "22",
-                img: 'ipad6.jpg',
-                name: 'Máy tính bảng iPad Pro M1 12.9 inch WiFi Cellular 256GB (2021)',
-                prices: '2000',
-                type: "ipad"
+                img: 'asus9.png',
+                name: 'ASUS ZenBook 14 UX3402ZA-KM219W, i5-1240P/16GB/512GB/14.OLED.QWXGA/W11SL/Xanh',
+                prices: '24790000',
+                type: "asus"
             },
-        
+
             {
                 id: "23",
-                img: 'ipad7.jpg',
-                name: 'Máy tính bảng iPad Pro M1 12.9 inch WiFi Cellular 128GB (2021)',
-                prices: '2400',
-                type: "ipad"
+                img: 'asus10.png',
+                name: 'ASUS ZenBook Flip UX363EA-HP726W, i5-1135G7/8GB/512GB/Touch/Pen/Cáp/Túi/Win11/Xám ',
+                prices: '20490000',
+                type: "asus"
             },
 
             {
                 id: "24",
-                img: '131mobile6.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1600',
-                type: "iphone"
+                img: 'asus11.png',
+                name: 'ASUS ProArt W7600Z3A-L2048W-i9-12900H/32GB/1TB/RTXA3000/16OLED4K/W11SL/Đen',
+                prices: '75890000',
+                type: "asus"
             },
 
             {
                 id: "25",
-                img: '131mobile7.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1700',
-                type: "iphone"
+                img: 'asus12.png',
+                name: 'ASUS ProArt H7600ZM-L2079W-i9-12900H/32GB/1TB/RTX3060/16OLED4K/W11SL/Đen',
+                prices: '63890000',
+                type: "asus"
             },
 
             {
                 id: "26",
-                img: '131mobile8.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1800',
-                type: "iphone"
+                img: 'asus13.png',
+                name: 'Asus TUF Gaming F15 FX507ZE - HN093W - i7 - 12700H/8GB/512GB/RTX 3050 4GB/15.6-inch FHD/Win 11/Xám',
+                prices: '27890000',
+                type: "asus"
             },
 
             {
                 id: "27",
-                img: '131mobile9.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1900',
-                type: "iphone"
+                img: 'asus14.png',
+                name: 'Asus TUF Gaming Dash FX517ZC-HN077W- i5-12450H/8GB/512GB/15.6FHD144Hz/W11SL/4GD6_RTX3050',
+                prices: '23790000',
+                type: "asus"
             },
 
             {
                 id: "28",
-                img: '131mobile10.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1900',
-                type: "iphone"
+                img: 'asus15.png',
+                name: 'ASUS TUF Gaming F17 FX706HC-HX105W I5-11400H/8GB/512GB/VGA 4GB RTX3050/17.3 FHD 144HZ/WIN11/ĐEN',
+                prices: '18990000',
+                type: "asus"
             },
 
             {
                 id: "29",
-                img: '131mobile11.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1900',
-                type: "iphone"
+                img: 'asus16.png',
+                name: 'ASUS TUF Gaming F15 FX506HC-HN144W, i5-11400H/8GB/512GB/RTX3050/15.6FHD144HZ/W11SL/Đen',
+                prices: '20290000',
+                type: "asus"
             },
 
             {
                 id: "30",
-                img: '131mobile12.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1900',
-                type: "iphone"
+                img: 'asus17.png',
+                name: 'ASUS TUF Gaming A15 FA507RM-HN018W, R7-6800H/8GB/512GB/RTX3060/15.6FHD144Hz/W11SL/Xám',
+                prices: '27990000',
+                type: "asus"
             },
 
-            {
-                id: "31",
-                img: '131mobile12.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1900',
-                type: "iphone"
-            },
-
-            {
-                id: "32",
-                img: '131mobile13.jpg',
-                name: 'IPHONE 13 mini new',
-                prices: '1900',
-                type: "iphone"
-            },
-            
-        
-            ];
-            localStorage.setItem('product',JSON.stringify(arrProduct));
-    } else{
+        ];
+        localStorage.setItem('product', JSON.stringify(arrProduct));
+    } else {
         arrProduct = JSON.parse(localStorage.getItem('product'));
     }
 }
