@@ -252,6 +252,166 @@ function createProduct() {
                 type: "asus"
             },
 
+            {
+                id: "31",
+                img: 'keyboard1.png',
+                name: 'Bàn phím cơ AKKO 3098N Multi-modes Black & Cyan',
+                prices: '2990000',
+                type: "keyboard"
+            },
+
+            {
+                id: "32",
+                img: 'keyboard2.png',
+                name: 'Bàn phím cơ AKKO PC75B Plus v2 Black Gold',
+                prices: '2990000',
+                type: "keyboard"
+            },
+
+            {
+                id: "33",
+                img: 'keyboard3.png',
+                name: 'Bàn phím cơ Fuhlen H95S Panda 3 Mode Wireless',
+                prices: '2990000',
+                type: "keyboard"
+            },
+
+            {
+                id: "34",
+                img: 'keyboard4.png',
+                name: 'Bàn phím cơ AKKO 3098N Multi-modes Black & Cyan',
+                prices: '2290000',
+                type: "keyboard"
+            },
+
+            {
+                id: "35",
+                img: 'keyboard5.png',
+                name: 'Bàn phím iKBC CD87 Vintage',
+                prices: '1700000',
+                type: "keyboard"
+            },
+
+            {
+                id: "36",
+                img: 'keyboard6.png',
+                name: 'Bàn phím Keychron K8 Pro Keycap Đen Khung Nhôm Led RGB',
+                prices: '2590000',
+                type: "keyboard"
+            },
+
+            {
+                id: "37",
+                img: 'keyboard7.png',
+                name: 'Bàn phím Newmen GM840 Pro Hạc Vũ Ánh Trăng',
+                prices: '1890000',
+                type: "keyboard"
+            },
+
+            {
+                id: "38",
+                img: 'keyboard8.png',
+                name: 'Bàn phím Newmen GM610 Pro Hạc Vũ Ánh Trăng',
+                prices: '1390000',
+                type: "keyboard"
+            },
+
+            {
+                id: "39",
+                img: 'keyboard9.png',
+                name: 'Bàn phím cơ AKKO 3098S World Tour London',
+                prices: '1990000',
+                type: "keyboard"
+            },
+
+            {
+                id: "40",
+                img: 'keyboard10.png',
+                name: 'Bàn phím Rapoo V500 Pro Multimode TKL',
+                prices: '990000',
+                type: "keyboard"
+            },
+
+            {
+                id: "41",
+                img: 'mouse1.png',
+                name: 'Chuột Logitech G102 Lightsync RGB White',
+                prices: '400000',
+                type: "mouse"
+            },
+
+            {
+                id: "42",
+                img: 'mouse2.png',
+                name: 'Chuột Logitech POP with Emoji Button Blast Yellow',
+                prices: '590000',
+                type: "mouse"
+            },
+
+            {
+                id: "43",
+                img: 'mouse3.png',
+                name: 'Chuột Logitech G402 Hyperion',
+                prices: '659000',
+                type: "mouse"
+            },
+
+            {
+                id: "44",
+                img: 'mouse4.png',
+                name: 'Chuột Razer DeathAdder V2',
+                prices: '990000',
+                type: "mouse"
+            },
+
+            {
+                id: "45",
+                img: 'mouse1.png',
+                name: 'Chuột Dare-U A918 Wireless - BLACK',
+                prices: '590000',
+                type: "mouse"
+            },
+
+            {
+                id: "46",
+                img: 'mouse1.png',
+                name: 'Chuột SteelSeries Aerox 3',
+                prices: '490000',
+                type: "mouse"
+            },
+
+            {
+                id: "47",
+                img: 'mouse7.png',
+                name: 'Chuột không dây Rapoo MT550',
+                prices: '490000',
+                type: "mouse"
+            },
+
+            {
+                id: "48",
+                img: 'mouse8.png',
+                name: 'Chuột gaming Corsair Harpoon Pro RGB',
+                prices: '450000',
+                type: "mouse"
+            },
+
+            {
+                id: "49",
+                img: 'mouse9.png',
+                name: 'Chuột ASUS ROG Keris Wireless',
+                prices: '1790000',
+                type: "mouse"
+            },
+
+            {
+                id: "50",
+                img: 'mouse10.png',
+                name: 'Chuột Asus ROG Strix Impact II Gundam Edition',
+                prices: '1190000',
+                type: "mouse"
+            },
+
         ];
         localStorage.setItem('product', JSON.stringify(arrProduct));
     } else {
