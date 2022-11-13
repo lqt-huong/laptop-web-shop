@@ -1,0 +1,18 @@
+@media (max-width: 845px) {
+
+    li.li-nav-product{
+        display: none;
+    }
+}
+@media (max-width: 649px) {
+
+    li.li-nav-about{
+        display: none;
+    }
+}
+@media (max-width: 530px) {
+
+    li.li-nav-home{
+        display: none;
+    }
+}

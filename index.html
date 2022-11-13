@@ -10,42 +10,305 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/all.min.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/text.css">
+    <meta name="referrer" content="no-referrer">
     <title>TechBeats</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/inbox.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="./assets/js/Winwheel.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header id="header" class="sticky">
+    <div id="preLoader"></div>
+    <header id="header">
         <nav class="navbar">
             <a class="logo" href="index.html"><img src="assets/img/TECHBEATS.png" alt="logo"></a>
+
             <ul>
-                <li class="nav-button"><a href="index.html">home</a></li>
-                <li class="nav-button"><a href="#">sản phẩm</a>
+                <li class="nav-button li-nav-home"><a href="index.html">home</a></li>
+                <li class="nav-button li-nav-product"><a href="#">sản phẩm</a>
                     <div class="sub-menu">
                         <ul>
-                            <li><a href="#">laptop</a></li>
-                            <li><a href="#">phụ kiện</a></li>
+                            <li><a href="?product">laptop</a></li>
+                            <li><a href="?accessory">phụ kiện</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-button"><a href="#">about</a></li>
-                <li class="nav-button"><a href="#">Đăng nhập</a></li>
-                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li class="nav-button li-nav-about"><a href="#">about</a></li>
+                <li class="nav-button header__login" onclick="displayLogin();"><a>Đăng nhập</a></li>
+                <div class="header__has__login" style="display: none;" id="hasLogin">
+                    <img src="./assets/img/avt.jpg" alt="">
+                    <span id="userLogin">Datisekai</span>
+                    <ul class="has__login-list">
+                        <li class="has__login-item" id="admin" style="display: none;"><a href="admin.html">Admin</a></li>
+                        <li class="has__login-item"><a href="index.html?event=vqmm">Vòng quay</a></li>
+                        <li class="has__login-item"><a href="cart.html">Giỏ hàng</a></li>
+                        <li class="has__login-item"><a href="order.html">Đơn đặt hàng</a></li>
+                        <li class="has__login-item"><a href="#" id="logout" onclick="onLogOut();">Đăng xuất</a></li>
+                    </ul>
+                </div>
+                <li class="header_cart">
+                    <i class="fa-solid fa-cart-shopping" onclick="onCart();" ></i>
+                    <span id="quantifyProductCart"></span>
+                </li>
             </ul>
         </nav>
     </header>
+    <div class="modal__login">
 
-    <!-- CONTENT -->
-    <div id="content">
+        <div class="modal__overlay" onclick="hideLogin();"></div>
+
+        <div class="modal__content">
+                
+            <div class="modal__content-heading">Login</div>
+            <form action="index.html" method="POST" id="form-login" role="form" name="login" onsubmit=" return displayLogin()">
+                <div class="modal__content-list">
+                    <p id="errorLogin"></p>
+                    <!-- <label for="username" class="modal__content-des">Username</label> -->
+                    <input type="text" placeholder="Enter your username......" name="username" id="username" class="modal__content-item" onblur="hideErrorUser();">
+                    <p id="errorUser"></p>
+                </div>
+            
+                <div class="modal__content-list">
+                    <!-- <label for="password" class="modal__content-des">Password</label> -->
+                    <input type="password" placeholder="Enter your password......" name="password" id="password" class="modal__content-item" onblur="hideErrorPass();">
+                    <p id="errorPass"></p>
+                </div>
+
+                <div class="modal__content-list" id="modal__email" style="display: none;">
+                    <!-- <label for="password" class="modal__content-des">Email</label> -->
+                    <input type="text" placeholder="Enter your email......" name="email" id="email" class="modal__content-item" onblur="hideErrorEmail();">
+                    <p id="errorEmail"></p>
+                </div>
+
+                <div class="modal__content-list">
+                    <input type="button" name="button" value="LOGIN" class="modal__content-btn" id="login" onclick="onLogin();">   
+                    <input type="button" name="button" value="REGISTER" class="modal__content-btn" style="display: none;" id="register" onclick="onRegister();"> 
+                </div>
+            
+                <!-- <p class="modal__content-login-other">or sign in with</p>
+
+                <div class="modal__content-social">
+                    <div class="modal__content-social-item"><i class="social-item fab fa-facebook"></i></div>
+                    <div class="modal__content-social-item"><i class="social-item fab fa-telegram"></i></div>
+                    <div class="modal__content-social-item"><i class="social-item fab fa-github"></i></div>
+                </div> -->
+
+                <p class="modal__content-sign-up" id="modal-signup">Do not have an account?<a class="modal__content-sign-up-btn" id="signup" onclick="onSignUp();">Sign up</a></p>
+                <p class="modal__content-sign-up" style="display:none;" id="modal-signin">Do you already have an account?<a class="modal__content-sign-up-btn" id="signin" onclick="onSignIn();">Sign in</a></p>
+
+                <div class="modal__content-btn-close" onclick="hideLogin();">
+                    <i class="btn-close far fa-times-circle"></i>
+                </div>
+            </form>
+
+        </div>
 
     </div>
+    <div class="modal__product" id="modalProduct" style="display:none;">
+        <div class="modal__product-overlay"></div>
 
-    <!-- FOOTER -->
-    <footer id="footer">
+        <div class="modal__product-content">
+            <div class="modal__product-img hide-on-mobile hide-on-tablet" id="imgModalProduct">
+                <!-- <img src="" alt="" id="imgModalProduct"> -->
+            </div>
+            
+            <div class="modal__product-info">
+                <div class="modal__product-info-name" id="nameModalProduct">
+                    <!-- <h3 id="textModalProduct">IPHONE 13 MINI NEW 100%</h3> -->
+                </div>
 
-    </footer>
+                <div class="modal__product-info-prices" id="pricesModalProduct">
+                    <!-- <p>Giá sản phẩm: <span>$500</span></p> -->
+                </div>
+                
+                <div class="modal__product-info-quantify">
+                    <p>Số lượng</p><br>
+                    <i class="btn-icon far fa-minus-square minus">
+                    </i><input type="text" readonly value="1" class="quatify">
+                    <i class="btn-icon far fa-plus-square plus"></i>
+                </div>
+
+                <div class="modal__product-codesale">
+                    <p>Mã giảm giá</p>
+                    <input type="text" placeholder="Nhập vào mã giảm giá ........."  id="codesale">
+                </div>
+               
+
+                <div class="modal__product-btn">
+                    <div class="btn__buynow"></div>
+
+                    <div class="btn__addcart" id="btnCart"></div>
+                </div>
+
+                <div class="modal__product-close"><i class="fas fa-times-circle"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal__bars">
+        <div class="modal__bars-overlay" id="barsOverlay" onclick="hideModalBars();"></div>
+
+        <div class="modal__bars-content" id="barsContent">
+            <div class="bars-close" id="barsClose" onclick="hideModalBars();">
+                <i class="bars-close-btn fas fa-times"></i>
+            </div>
+
+            <div class="bars-search">
+                <input type="text" placeholder="Search something...." onchange="searchInfo('txtsearch2');" id="txtsearch2">
+            </div>
+
+            <div class="bars-category">
+                <ul class="bars__list">
+                    <a href="index.html">
+
+                        <li class="bars__list-item">Home</li>
+                    </a>
+                    <!-- <a href="cart.html">
+
+                        <li class="bars__list-item">Cart</li>
+                    </a> -->
+                    <li class="bars__list-item" id="barsCategory" onclick="displayCategoryBars();">Category</li>
+                    <span style="display: none;" id="barCategoryClose" onclick="hideCategoryBars();"><i class="fas fa-window-close"></i></span>
+                    <ul class="bars-item-list" id="barsCategoryItem">
+                        <a href="?product=apple"><li class="bars-item-list-item">APPLE</li></a>
+                        <a href="?product=dell"><li class="bars-item-list-item">DELL</li></a>
+                        <a href="?product=asus"><li class="bars-item-list-item">ASUS</li></a>
+                        
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slides">
+           
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+           
+                
+                <div class="slide frist" style="background-image: url(./assets/img/1.png);"></div>
+                <div class="slide two" style="background-image: url(./assets/img/2.png)"></div>
+                <div class="slide three" style="background-image: url(./assets/img/3.png);"></div>
+                <div class="slide four" style="background-image: url(./assets/img/4.png);"></div>
+
+        </div>     
+    </div>
+    <div class="container">
+        
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-2 m-0 c-0">
+                    <div class="menu__product">
+                        <div class="menu__heading">Category</div>
+                        <ul class="menu__list">
+                            <a href="?product=apple"><li class="menu__list-item" id="iphone">APPLE</li></a>
+                            <a href="?product=dell"><li class="menu__list-item" id="ipad">DELL</li></a>
+                            <a href="?product=asus"><li class="menu__list-item" id="macbook">ASUS</li></a>
+                        </ul>
+                        <div class="menu__heading">Accessory</div>
+                        <ul class="menu__list">
+                            <a href="?accessory=keyboard"><li class="menu__list-item" id="iphone">KEYBOARD</li></a>
+                            <a href="?accessory=mouse"><li class="menu__list-item" id="ipad">MOUSE</li></a>
+                        </ul>
+                    </div>
+                    <div class="img-pr" style="background-image: url('./assets/img/img-pr.png');">
+                    </div>
+                </div>
+                <div class="col l-10 m-12 c-12" >
+                        
+                        <div class="header__search hide-on-tablet" id="header__search">
+                            <div class="header__search-input">
+                                <input type="text" placeholder="Search something........." class="search-input" id="txtsearch" onchange="searchInfo('txtsearch');">
+                            </div>
+                            
+                            <div class="header__search-btn" onclick="searchInfo('txtsearch');">
+                                <i class="search-btn fas fa-search"></i>
+                            </div>
+                        </div>
+        
+                        <div class="select__search">
+
+                            <select name="" id="sortPrices" onchange="onSort();">
+                                <option>Sắp xếp giá</option>
+                                <option value="1">Từ thấp đến cao</option>
+                                <option value="2">Từ cao đến thấp</option>
+                            </select>
+                        </div>
+                        <div class="lucky__whell" id="content">
+                        </div>
+                        <div class="home__product">
+                            <div class="row" id="display_product"></div>
+                        </div>
+
+                    <div class="pagination">
+                        <div class="pagination__list">
+                            <a href="index.html" class="pagination__list-link"><div class="pagination__list-item">Home</div></a>
+                            <a href="" id="prePage" class="pagination__list-link"><div class="pagination__list-item">Prev</div></a>
+                            <a href="" class="pagination__list-link" id="page1"><div class="pagination__list-item">1</div></a>
+                            <a href="" class="pagination__list-link" id="page2"><div class="pagination__list-item">2</div></a>
+                            <a href="" class="pagination__list-link" id="page3"><div class="pagination__list-item">3</div></a> 
+                            <a href="" id="nextPage" class="pagination__list-link"><div class="pagination__list-item">Next</div></a>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-container">
+        <div class="grid wide">
+            <div class="row">
+                <div class="col l-12">
+        <div class="sub-container__heading">
+            <h1>VIDEO REVIEW SẢN PHẨM</h1>
+        </div>
+        <div class="sub-container__content" id="videoReview">
+            
+        </div>
+        </div></div></div>
+    </div>
+    <div class="footer">
+        <div class="footer__left">
+           <div class="footer__left-item">
+            <i class="icon-footer fas fa-location-arrow"></i>
+           <span class="footer__left-address"> 100 An Dương Vương,<br>   
+               Phường 1, Quận 5, TpHCM
+           </span>
+           </div>
+           <div class="footer__left-item">
+            <i class="icon-footer fas fa-phone-volume"></i>
+               +012345678
+           </div>
+           <div class="footer__left-item">
+            <i class="icon-footer far fa-envelope-open"></i>
+               techbeats_offical@gmail.com
+           </div>
+        </div>
+        <div class="footer__right">
+            <div class="footer__right-heading">
+                <h2>About the Shop LAPTOP</h2>
+            </div>
+            <p class="footer__right-mid">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br><br>
+                sed do eiusmod tempor incididunt ut labore et dolore<br><br>
+                magna aliqua. Ut enim ad minim veniam<br><br><br>
+            </p>
+            <span class="footer__icon">
+                <a href="#" class="footer__btn"><i class="icon-footer fab fa-facebook"></i></a>
+                <a href="#" class="footer__btn"><i class="icon-footer fab fa-youtube"></i></a>
+                <a href="#" class="footer__btn"><i class="icon-footer fab fa-instagram"></i></a>
+                <a href="#" class="footer__btn"><i class="icon-footer fab fa-linkedin-in"></i></a>
+            </span>
+        </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/review.js"></script>
 </body>
 
 </html>
