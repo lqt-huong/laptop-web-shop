@@ -27,40 +27,40 @@
 <body>
 	<div id="preLoader"></div>
 		<div class="main__cart">	
-            <header id="header">
-                <nav class="navbar">
-                    <a class="logo" href="index.html"><img src="assets/img/TECHBEATS.png" alt="logo"></a>
-        
-                    <ul>
-                        <li class="nav-button li-nav-home"><a href="index.html">home</a></li>
-                        <li class="nav-button li-nav-product"><a href="#">sản phẩm</a>
-                            <div class="sub-menu">
-                                <ul>
-                                    <li><a href="#">laptop</a></li>
-                                    <li><a href="#">phụ kiện</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-button li-nav-about"><a href="#">about</a></li>
-                        <li class="nav-button header__login" onclick="displayLogin();"><a>Đăng nhập</a></li>
-                        <div class="header__has__login" style="display: none;" id="hasLogin">
-                            <img src="./assets/img/avt.jpg" alt="">
-                            <span id="userLogin">Datisekai</span>
-                            <ul class="has__login-list">
-                                <li class="has__login-item" id="admin" style="display: none;"><a href="admin.html">Admin</a></li>
-                                <li class="has__login-item"><a href="index.html?event=vqmm">Vòng quay</a></li>
-                                <li class="has__login-item"><a href="cart.html">Giỏ hàng</a></li>
-                                <li class="has__login-item"><a href="order.html">Đơn đặt hàng</a></li>
-                                <li class="has__login-item"><a href="#" id="logout" onclick="onLogOut();">Đăng xuất</a></li>
-                            </ul>
-                        </div>
-                        <li class="header_cart">
-                            <i class="fa-solid fa-cart-shopping" onclick="onCart();" ></i>
-                            <span id="quantifyProductCart"></span>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+			<header id="header">
+				<nav class="navbar">
+					<a class="logo" href="index.html"><img src="assets/img/TECHBEATS.png" alt="logo"></a>
+		
+					<ul>
+						<li class="nav-button li-nav-home"><a href="index.html">home</a></li>
+						<li class="nav-button li-nav-product"><a href="#">sản phẩm</a>
+							<div class="sub-menu">
+								<ul>
+									<li><a href="index.html?product">laptop</a></li>
+									<li><a href="index.html?accessory">phụ kiện</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-button li-nav-about" onclick="scrollSmoothToBottom();"><a href="#">about</a></li>
+						<li class="nav-button header__login" onclick="displayLogin();"><a>Đăng nhập</a></li>
+						<div class="header__has__login" style="display: none;" id="hasLogin">
+							<img src="./assets/img/avt.jpg" alt="">
+							<span id="userLogin">Datisekai</span>
+							<ul class="has__login-list">
+								<li class="has__login-item" id="admin" style="display: none;"><a href="admin.html">Admin</a></li>
+								<li class="has__login-item"><a href="index.html?event=vqmm">Vòng quay</a></li>
+								<li class="has__login-item"><a href="cart.html">Giỏ hàng</a></li>
+								<li class="has__login-item"><a href="order.html">Đơn đặt hàng</a></li>
+								<li class="has__login-item"><a href="#" id="logout" onclick="onLogOut();">Đăng xuất</a></li>
+							</ul>
+						</div>
+						<li class="header_cart">
+							<i class="fa-solid fa-cart-shopping" onclick="onCart();" ></i>
+							<span id="quantifyProductCart"></span>
+						</li>
+					</ul>
+				</nav>
+			</header>
 			<div class="section">
 				<!--Thanh tiêu đề-->
 				<p class="section-head">GIỎ HÀNG</p>

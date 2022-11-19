@@ -7,7 +7,7 @@ function createProduct() {
                 id: "0",
                 img: 'apple1.png',
                 name: 'Macbook Air 13" 2020 - M1 256GB',
-                prices: '22490000',
+                prices: '900',
                 type: "apple"
             },
 
@@ -15,7 +15,7 @@ function createProduct() {
                 id: "1",
                 img: 'apple2.png',
                 name: 'Macbook Air M2 13.6" 2022 - 512GB',
-                prices: '36590000',
+                prices: '1500',
                 type: "apple"
             },
 
@@ -23,7 +23,7 @@ function createProduct() {
                 id: "2",
                 img: 'apple3.png',
                 name: 'Macbook Pro M2 13" 2022 - 256GB',
-                prices: '30490000',
+                prices: '1200',
                 type: "apple"
             },
 
@@ -31,7 +31,7 @@ function createProduct() {
                 id: "3",
                 img: 'apple4.png',
                 name: 'Macbook Pro M2 13" 2022 - 512GB',
-                prices: '35190000',
+                prices: '1400',
                 type: "apple"
             },
 
@@ -39,7 +39,7 @@ function createProduct() {
                 id: "4",
                 img: 'apple5.png',
                 name: 'Apple M1 - MacBook Pro 13" 256GB 2020',
-                prices: '27890000',
+                prices: '1100',
                 type: "apple"
             },
 
@@ -47,7 +47,7 @@ function createProduct() {
                 id: "5",
                 img: 'apple6.png',
                 name: 'Macbook Pro 14" 2021 - M1 Pro 14 Core GPU/512GB',
-                prices: '45990000',
+                prices: '1900',
                 type: "apple"
             },
 
@@ -55,7 +55,7 @@ function createProduct() {
                 id: "6",
                 img: 'apple7.png',
                 name: 'Macbook Pro 16" 2021 - M1 Max 32 Core GPU/1TB',
-                prices: '82590000',
+                prices: '3300',
                 type: "apple"
             },
 
@@ -63,7 +63,7 @@ function createProduct() {
                 id: "7",
                 img: 'apple8.png',
                 name: 'Macbook Pro 16" 2021 - M1 Pro 16 Core GPU/512GB',
-                prices: '57590000',
+                prices: '2300',
                 type: "apple"
             },
 
@@ -71,7 +71,7 @@ function createProduct() {
                 id: "8",
                 img: 'dell1.png',
                 name: 'Dell Inspiron 15 3511 P112F001FBL I5-1135G7/8GB/512GB/15.6',
-                prices: '14990000',
+                prices: '600',
                 type: "dell"
             },
 
@@ -80,7 +80,7 @@ function createProduct() {
                 id: "9",
                 img: 'dell2.png',
                 name: 'Dell Inspiron 16 5620 i5P165W11SLU i5-1240P/16GB/512GB/Intel Iris Xe/16.0 inch FHD',
-                prices: '22590000',
+                prices: '900',
                 type: "dell"
             },
 
@@ -88,7 +88,7 @@ function createProduct() {
                 id: "10",
                 img: 'dell3.png',
                 name: 'Dell Inspiron 16 5620-N6I7110W1, i7-1255U/8GB/512GB/16FHD',
-                prices: '22490000',
+                prices: '900',
                 type: "dell"
             },
 
@@ -96,7 +96,7 @@ function createProduct() {
                 id: "11",
                 img: 'dell4.png',
                 name: 'Dell Inspiron 15 3520-71001747- i7-1255U/8GB/512GB SSD,/15.6"',
-                prices: '21390000',
+                prices: '850',
                 type: "dell"
             },
 
@@ -104,7 +104,7 @@ function createProduct() {
                 id: "12",
                 img: 'dell5.png',
                 name: 'Dell Vostro 5620 V6I5001W1, i5-1240P/8GB/256GB/16FHD',
-                prices: '19390000',
+                prices: '800',
                 type: "dell"
             },
 
@@ -112,7 +112,7 @@ function createProduct() {
                 id: "13",
                 img: 'dell6.png',
                 name: 'Dell Vostro 5620 P117F001AGR i7-1260P/16GB/512GB/Iris Xe Graphics/16 inch FHD',
-                prices: '25990000',
+                prices: '1000',
                 type: "dell"
             },
 
@@ -120,7 +120,7 @@ function createProduct() {
                 id: "14",
                 img: 'asus1.png',
                 name: 'Asus Zenbook UX482EA-KA397W - (i5-1135G7/8GB/512GB/14.0" FHD/WiFi6/Win 11)',
-                prices: '27990000',
+                prices: '1100',
                 type: "asus"
             },
 
@@ -128,7 +128,7 @@ function createProduct() {
                 id: "15",
                 img: 'asus2.png',
                 name: 'ASUS ZenBook 14 UX3402ZA-KM221W, i7-1260P/16GB/512GB/14OLED/Win11/Blue',
-                prices: '28790000',
+                prices: '1100',
                 type: "asus"
             },
 
@@ -136,7 +136,7 @@ function createProduct() {
                 id: "16",
                 img: 'asus3.png',
                 name: 'ASUS ZenBook UP5401ZA-KN005W- i5-12500H/8GB/512GB/14WQ+_T/OLED/W11H/Xám',
-                prices: '23290000',
+                prices: '900',
                 type: "asus"
             },
 
@@ -144,7 +144,7 @@ function createProduct() {
                 id: "17",
                 img: 'asus4.png',
                 name: 'Laptop Gaming Asus Rog Strix G15 G513RC HN038W - R7-6800H/8GB/512GB/4GB RTX3050/15.6 FHD/WIN11/XÁM',
-                prices: '24490000',
+                prices: '1000',
                 type: "asus"
             },
 
@@ -152,7 +152,7 @@ function createProduct() {
                 id: "18",
                 img: 'asus5.png',
                 name: 'Laptop Gaming Asus Rog Strix G15 G513IM - HN008W - R7-4800H/16GB/512GB/RTX3060/15.6FHD/Win11/Xám',
-                prices: '27490000',
+                prices: '1100',
                 type: "asus"
             },
 
@@ -160,7 +160,7 @@ function createProduct() {
                 id: "19",
                 img: 'asus6.png',
                 name: 'ASUS TUF Gaming A15 FA507RC-HN051W, R7-6800H/8GB/512GB/15.6FHD/144Hz/RTX3050/W11SL/Xám',
-                prices: '22990000',
+                prices: '900',
                 type: "asus"
             },
 
@@ -168,7 +168,7 @@ function createProduct() {
                 id: "20",
                 img: 'asus7.png',
                 name: 'ASUS TUF Gaming FX506HM-HN366W, i7-11800H/8GB/512GB/RTX3060/15.6FHD144Hz/W11SL/Đen',
-                prices: '27890000',
+                prices: '1100',
                 type: "asus"
             },
 
@@ -176,7 +176,7 @@ function createProduct() {
                 id: "21",
                 img: 'asus8.png',
                 name: 'ASUS Gaming TUF Dash F15 FX517ZE-HN045W (i5-12450H/8GB/512GB/3050Ti 4GB15.6inchFHD/ Win11',
-                prices: '24190000',
+                prices: '1000',
                 type: "asus"
             },
 
@@ -184,7 +184,7 @@ function createProduct() {
                 id: "22",
                 img: 'asus9.png',
                 name: 'ASUS ZenBook 14 UX3402ZA-KM219W, i5-1240P/16GB/512GB/14.OLED.QWXGA/W11SL/Xanh',
-                prices: '24790000',
+                prices: '1000',
                 type: "asus"
             },
 
@@ -192,7 +192,7 @@ function createProduct() {
                 id: "23",
                 img: 'asus10.png',
                 name: 'ASUS ZenBook Flip UX363EA-HP726W, i5-1135G7/8GB/512GB/Touch/Pen/Cáp/Túi/Win11/Xám ',
-                prices: '20490000',
+                prices: '800',
                 type: "asus"
             },
 
@@ -200,7 +200,7 @@ function createProduct() {
                 id: "24",
                 img: 'asus11.png',
                 name: 'ASUS ProArt W7600Z3A-L2048W-i9-12900H/32GB/1TB/RTXA3000/16OLED4K/W11SL/Đen',
-                prices: '75890000',
+                prices: '3000',
                 type: "asus"
             },
 
@@ -208,7 +208,7 @@ function createProduct() {
                 id: "25",
                 img: 'asus12.png',
                 name: 'ASUS ProArt H7600ZM-L2079W-i9-12900H/32GB/1TB/RTX3060/16OLED4K/W11SL/Đen',
-                prices: '63890000',
+                prices: '2500',
                 type: "asus"
             },
 
@@ -216,7 +216,7 @@ function createProduct() {
                 id: "26",
                 img: 'asus13.png',
                 name: 'Asus TUF Gaming F15 FX507ZE - HN093W - i7 - 12700H/8GB/512GB/RTX 3050 4GB/15.6-inch FHD/Win 11/Xám',
-                prices: '27890000',
+                prices: '1100',
                 type: "asus"
             },
 
@@ -224,7 +224,7 @@ function createProduct() {
                 id: "27",
                 img: 'asus14.png',
                 name: 'Asus TUF Gaming Dash FX517ZC-HN077W- i5-12450H/8GB/512GB/15.6FHD144Hz/W11SL/4GD6_RTX3050',
-                prices: '23790000',
+                prices: '950',
                 type: "asus"
             },
 
@@ -232,7 +232,7 @@ function createProduct() {
                 id: "28",
                 img: 'asus15.png',
                 name: 'ASUS TUF Gaming F17 FX706HC-HX105W I5-11400H/8GB/512GB/VGA 4GB RTX3050/17.3 FHD 144HZ/WIN11/ĐEN',
-                prices: '18990000',
+                prices: '750',
                 type: "asus"
             },
 
@@ -240,7 +240,7 @@ function createProduct() {
                 id: "29",
                 img: 'asus16.png',
                 name: 'ASUS TUF Gaming F15 FX506HC-HN144W, i5-11400H/8GB/512GB/RTX3050/15.6FHD144HZ/W11SL/Đen',
-                prices: '20290000',
+                prices: '800',
                 type: "asus"
             },
 
@@ -248,15 +248,167 @@ function createProduct() {
                 id: "30",
                 img: 'asus17.png',
                 name: 'ASUS TUF Gaming A15 FA507RM-HN018W, R7-6800H/8GB/512GB/RTX3060/15.6FHD144Hz/W11SL/Xám',
-                prices: '27990000',
+                prices: '1100',
                 type: "asus"
             },
 
             {
-                id: "30",
-                img: 'asus17.png',
-                name: 'MOUSE TUF Gaming A15 FA507RM-HN018W, R7-6800H/8GB/512GB/RTX3060/15.6FHD144Hz/W11SL/Xám',
-                prices: '27990000',
+                id: "31",
+                img: 'keyboard1.png',
+                name: 'Bàn phím cơ AKKO 3098N Multi-modes Black & Cyan',
+                prices: '120',
+                type: "keyboard"
+            },
+
+            {
+                id: "32",
+                img: 'keyboard2.png',
+                name: 'Bàn phím cơ AKKO PC75B Plus v2 Black Gold',
+                prices: '120',
+                type: "keyboard"
+            },
+
+            {
+                id: "33",
+                img: 'keyboard3.png',
+                name: 'Bàn phím cơ Fuhlen H95S Panda 3 Mode Wireless',
+                prices: '120',
+                type: "keyboard"
+            },
+
+            {
+                id: "34",
+                img: 'keyboard4.png',
+                name: 'Bàn phím cơ AKKO 3098N Multi-modes Black & Cyan',
+                prices: '90',
+                type: "keyboard"
+            },
+
+            {
+                id: "35",
+                img: 'keyboard5.png',
+                name: 'Bàn phím iKBC CD87 Vintage',
+                prices: '70',
+                type: "keyboard"
+            },
+
+            {
+                id: "36",
+                img: 'keyboard6.png',
+                name: 'Bàn phím Keychron K8 Pro Keycap Đen Khung Nhôm Led RGB',
+                prices: '100',
+                type: "keyboard"
+            },
+
+            {
+                id: "37",
+                img: 'keyboard7.png',
+                name: 'Bàn phím Newmen GM840 Pro Hạc Vũ Ánh Trăng',
+                prices: '75',
+                type: "keyboard"
+            },
+
+            {
+                id: "38",
+                img: 'keyboard8.png',
+                name: 'Bàn phím Newmen GM610 Pro Hạc Vũ Ánh Trăng',
+                prices: '55',
+                type: "keyboard"
+            },
+
+            {
+                id: "39",
+                img: 'keyboard9.png',
+                name: 'Bàn phím cơ AKKO 3098S World Tour London',
+                prices: '80',
+                type: "keyboard"
+            },
+
+            {
+                id: "40",
+                img: 'keyboard10.png',
+                name: 'Bàn phím Rapoo V500 Pro Multimode TKL',
+                prices: '40',
+                type: "keyboard"
+            },
+
+            {
+                id: "41",
+                img: 'mouse1.png',
+                name: 'Chuột Logitech G102 Lightsync RGB White',
+                prices: '15',
+                type: "mouse"
+            },
+
+            {
+                id: "42",
+                img: 'mouse2.png',
+                name: 'Chuột Logitech POP with Emoji Button Blast Yellow',
+                prices: '20',
+                type: "mouse"
+            },
+
+            {
+                id: "43",
+                img: 'mouse3.png',
+                name: 'Chuột Logitech G402 Hyperion',
+                prices: '25',
+                type: "mouse"
+            },
+
+            {
+                id: "44",
+                img: 'mouse4.png',
+                name: 'Chuột Razer DeathAdder V2',
+                prices: '40',
+                type: "mouse"
+            },
+
+            {
+                id: "45",
+                img: 'mouse1.png',
+                name: 'Chuột Dare-U A918 Wireless - BLACK',
+                prices: '20',
+                type: "mouse"
+            },
+
+            {
+                id: "46",
+                img: 'mouse1.png',
+                name: 'Chuột SteelSeries Aerox 3',
+                prices: '20',
+                type: "mouse"
+            },
+
+            {
+                id: "47",
+                img: 'mouse7.png',
+                name: 'Chuột không dây Rapoo MT550',
+                prices: '20',
+                type: "mouse"
+            },
+
+            {
+                id: "48",
+                img: 'mouse8.png',
+                name: 'Chuột gaming Corsair Harpoon Pro RGB',
+                prices: '15',
+                type: "mouse"
+            },
+
+            {
+                id: "49",
+                img: 'mouse9.png',
+                name: 'Chuột ASUS ROG Keris Wireless',
+                prices: '70',
+                type: "mouse"
+            },
+
+            {
+                id: "50",
+                img: 'mouse10.png',
+                name: 'Chuột Asus ROG Strix Impact II Gundam Edition',
+                prices: '50',
                 type: "mouse"
             },
 
@@ -391,6 +543,13 @@ function onLogin()
     }
     
 }
+
+// Require jQuery
+function scrollSmoothToBottom() 
+{
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
 
 function hideErrorUser()
 {
@@ -680,6 +839,12 @@ function showAlert()
    alert('datisekai');
 }
 
+function filterrange(){
+    var min = document.getElementById("input-min").value;
+    var max = document.getElementById("input-max").value;
+    window.location = "index.html?min=" + min +"&max=" + max;
+}
+
 function renderProduct(arrProduct)
 {
     var page = parseInt(getQueryVariable('page')) || 1;
@@ -687,6 +852,8 @@ function renderProduct(arrProduct)
     var begin = (page-1)*perPage;
     var end = page * perPage;
     var arrProductPag = arrProduct.slice(begin,end);
+    sessionStorage.setItem('begin',begin);
+    sessionStorage.setItem('end',end);
     var k = 0;
     var s = "";
     while (k<arrProductPag.length)
@@ -707,10 +874,47 @@ function renderProduct(arrProduct)
     document.getElementById('display_product').innerHTML = s;
 }
 
+function renderProduct1(arrProduct)
+{
+    var k = 0;
+    var s = "";
+    while (k<arrProduct.length)
+    {   
+        
+        s = s + '<div class="col l-3 m-4 c-12"> <div class="home__product-item" onclick="showModal('+arrProduct[k].id+')"><div class="home__product-item-img"> <img src="./assets/img/'+arrProduct[k].img+'" alt=""> </div>'+
+                ' <div class="home__product-item-description"><h4>'+arrProduct[k].name+'</h4></div>' + 
+                '<div class="home__product-item-appreciate"><div class="appreciate-item"> <i class="appreciate-item-btn fas fa-star"></i> </div>' +
+                '<div class="appreciate-item"><i class="appreciate-item-btn fas fa-star"></i></div>' +
+                '<div class="appreciate-item"><i class="appreciate-item-btn fas fa-star"></i></div>' +
+                '<div class="appreciate-item"><i class="appreciate-item-btn fas fa-star"></i></div>' +
+                '<div class="appreciate-item"><i class="appreciate-item-btn fas fa-star"></i></div>' + ' <span>(1 Reviewer)</span>' + '</div>' + 
+                '<div class="home__product-item-prices"><h4>$'+arrProduct[k].prices+'</h4> </div>'+
+                '<div class="home__product-item-btn"><button>View Info</button></div>' +
+                '</div> </div>';  
+                k++; 
+    }
+    document.getElementById('display_product').innerHTML = s;
+}
+
+/*function pricerange(arrProduct){
+    var min = getQueryVariable2('min');
+    var max = getQueryVariable2('max');
+    var arrSearch = [];
+    var d = 0;
+    for (var i=0;i<arrProduct.length;i++) {
+        if(arrSearch.prices > min && arrSearch.prices < max) {
+            arrSearch[d] = arrProduct[i];
+            d++;
+        }
+    }
+    return arrSearch;
+}
+*/
 function renderDisplayProduct()
 {
     var arrSearch = [];
     var d = 0;
+    var count = 0;
     if(getQueryVariable2('product') != null) {
         for (var i=0;i<arrProduct.length;i++) {
             var array = arrProduct[i].type;  
@@ -725,7 +929,7 @@ function renderDisplayProduct()
             if(getQueryVariable2('accessory') != null) {
             for (var i=0;i<arrProduct.length;i++) { 
                 var array = arrProduct[i].type;  
-                if(array == "mouse" || array == "keybord"){
+                if(array == "mouse" || array == "keyboard"){
                     arrSearch[d] = arrProduct[i];
                     d++;
                 }
@@ -754,38 +958,32 @@ function renderDisplayProduct()
                             }
                         }
                         renderProduct(arrSearch);
-                    } 
+                    }
                     else {
-                        renderProduct(arrProduct);
-                        return arrProduct.length;
+                        if(getQueryVariable('min') !=null) {
+                            var min = parseInt(getQueryVariable('min'));
+                            var max = parseInt(getQueryVariable('max'));
+                            for (var i=0;i<arrProduct.length;i++) {
+                                if((arrProduct[i].prices > min) && arrProduct[i].prices < max) {
+                                    arrSearch[d] = arrProduct[i];
+                                    d++;
+                                }
+                            }
+                            console.log(arrSearch);
+                            renderProduct(arrSearch);
+                        }
+                        else {
+                            sessionStorage.setItem('arrSearch',JSON.stringify(arrProduct));
+                            renderProduct(arrProduct);
+                            return arrProduct.length;
+                        }
                     }
                 }
             }
         }
-    return d;
+        sessionStorage.setItem('arrSearch',JSON.stringify(arrSearch));
+        return d;
 }
-
-function renderDisplayProduct1(arrSearch)
-{
-
-    var product = getQueryVariable('product');
-    var d = 0;
-    if(getQueryVariable('product') !=null)
-    {
-    
-        for (var i=0;i<arrProduct.length;i++)
-        {
-            if(arrProduct[i].type == product){
-                arrSearch[d] = arrProduct[i];
-                d++;
-            }
-        }
-        renderProduct(arrSearch);
-    } else{
-        renderProduct(arrProduct);
-    }
-}
-
 
 function renderVQMM()
 {
@@ -933,17 +1131,17 @@ function renderPagination(amount1)
 
     if(page ==1 )
     {
-        document.getElementById('page1').style.backgroundColor = "black";
+        document.getElementById('page1').style.backgroundColor = "#FCB35F";
         document.getElementById('page1').style.color = "white";
     } 
     else if(page == 2)
     {
-        document.getElementById('page2').style.backgroundColor = "black";
+        document.getElementById('page2').style.backgroundColor = "#FCB35F";
         document.getElementById('page2').style.color = "white";
     }
     else if(page == 3)
     {
-        document.getElementById('page3').style.backgroundColor = "black";
+        document.getElementById('page3').style.backgroundColor = "#FCB35F";
         document.getElementById('page3').style.color = "white";
     }
 }
@@ -992,17 +1190,70 @@ function renderPagination1(amount1)
     }
     if(page ==1 )
     {
-        document.getElementById('page1').style.backgroundColor = "black";
+        document.getElementById('page1').style.backgroundColor = "#FCB35F";
         document.getElementById('page1').style.color = "white";
     } 
     else if(page == 2)
     {
-        document.getElementById('page2').style.backgroundColor = "black";
+        document.getElementById('page2').style.backgroundColor = "#FCB35F";
         document.getElementById('page2').style.color = "white";
     }
     else if(page == 3)
     {
-        document.getElementById('page3').style.backgroundColor = "black";
+        document.getElementById('page3').style.backgroundColor = "#FCB35F";
+        document.getElementById('page3').style.color = "white";
+    }
+}
+function renderPagination2(amount1)
+{
+    var min = getQueryVariable('min');
+    var max = getQueryVariable('max');
+    var page = getQueryVariable('page') || 1;
+    var prePage = 1;
+    if(page > 1) prePage = parseInt(page) - 1;
+    else {
+          prePage = 1 + "#";
+    }
+    var maxPage;
+    if(amount1 % 8 == 0)
+    {
+        maxPage = parseInt(amount1/8); 
+    }
+    else maxPage = parseInt(amount1/8) + 1; 
+    var nextPage;
+    if(page >= maxPage)
+    {
+        nextPage = maxPage + "# ";
+    } else {
+        nextPage = parseInt(page) + 1;
+    }
+
+    if(min != null) {
+        document.getElementById('prePage').href = 'index.html?min='+min+'&max='+max+'&page='+prePage;
+        document.getElementById('nextPage').href = 'index.html?min='+min+'&max='+max+'&page='+nextPage;
+        document.getElementById('page1').href = 'index.html?min='+min+'&max='+max+'&page=1';
+        document.getElementById('page2').href = 'index.html?min='+min+'&max='+max+'&page=2';
+        document.getElementById('page3').href = 'index.html?min='+min+'&max='+max+'&page=3';
+    } else {
+        document.getElementById('prePage').href = 'index.html?page='+prePage;
+        document.getElementById('nextPage').href = 'index.html?page='+nextPage;
+        document.getElementById('page1').href = 'index.html?page=1';
+        document.getElementById('page2').href = 'index.html?page=2';
+        document.getElementById('page3').href = 'index.html?page=3';
+    }
+    if(page == 1)
+    {
+        document.getElementById('page1').style.backgroundColor = "#FCB35F";
+        document.getElementById('page1').style.color = "white";
+    } 
+    else if(page == 2)
+    {
+        document.getElementById('page2').style.backgroundColor = "#FCB35F";
+        document.getElementById('page2').style.color = "white";
+    }
+    else if(page == 3)
+    {
+        document.getElementById('page3').style.backgroundColor = "#FCB35F";
         document.getElementById('page3').style.color = "white";
     }
 }
@@ -1031,10 +1282,24 @@ window.onload = function()
     var amount1 = renderDisplayProduct();
     if(getQueryVariable("product") != null)
         renderPagination(amount1);
-    else  renderPagination1(amount1);
+    else{
+        if(getQueryVariable("accessory") != null) {
+            renderPagination1(amount1);
+        }
+        else  renderPagination2(amount1);
+    }
     /*renderContainerHeading();*/
     innerQuantify(quantifyCart);
-    
+    if(getQueryVariable('min') != null){
+        var minVal = getQueryVariable('min');
+        var maxVal = getQueryVariable('max');
+        priceInput[0].value = minVal;
+        priceInput[1].value = maxVal;
+        rangeInput[0].value = minVal;
+        progress.style.left = (minVal / rangeInput[0].max) * 100  + "%";
+        rangeInput[1].value = maxVal;
+        progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100  + "%";
+    }
 }
 
 
@@ -1087,23 +1352,6 @@ function hideLoading()
 
 preLoading();
 
-function onSelect()
-{
-    var select = document.getElementById('selectPrices');
-    switch(select.value)
-    {
-        case '1':
-            filter1();
-            break;
-        case '2':
-            filter2();
-            break;
-        case '3':
-            filter3();
-            break;
-    }
-}
-
 function onSort()
 {
 
@@ -1122,45 +1370,28 @@ function onSort()
 
 function sortAscending()
 {
-    var arrAscending = arrProduct.sort(function(a,b){
-        return a.prices - b.prices;
+    var arrSearch = JSON.parse(sessionStorage.getItem('arrSearch'));
+    var begin = parseInt(sessionStorage.getItem('begin'));
+    var end = parseInt(sessionStorage.getItem('end'));
+    var arrSearch1 = arrSearch.slice(begin,end);
+    console.log(arrSearch1);
+    var arrAscending = arrSearch1.sort(function(begin,end){
+        return begin.prices - end.prices;
     });
-    renderDisplayProduct1(arrAscending);
+    renderProduct1(arrAscending);
 }
 
 function sortDescending()
 {
-    var arrDescending = arrProduct.sort(function(a,b){
-        return b.prices - a.prices;
+    var arrSearch = JSON.parse(sessionStorage.getItem('arrSearch'));
+    var begin = parseInt(sessionStorage.getItem('begin'));
+    var end = parseInt(sessionStorage.getItem('end'));
+    var arrSearch1 = arrSearch.slice(begin,end);
+    var arrDescending = arrSearch1.sort(function(begin,end){
+        return end.prices - begin.prices;
     });
-    renderDisplayProduct1(arrDescending);
+    renderProduct1(arrDescending);
 }
-
-function filter1()
-{
-    var arrFilter = arrProduct.filter(function(product,index,array){
-        return parseInt(product.prices) > 2000;
-    });
-    renderProduct(arrFilter);
-}
-
-function filter2()
-{
-    var arrFilter = arrProduct.filter(function(product,index,array){
-        return parseInt(product.prices) >= 1000 &&  parseInt(product.prices) <= 2000;
-    });
-    renderProduct(arrFilter);
-}
-
-function filter3()
-{
-    var arrFilter = arrProduct.filter(function(product,index,array){
-        return parseInt(product.prices) < 1000;
-    });
-    renderProduct(arrFilter);
-}
-
-
 
 //Cart
 
@@ -1235,3 +1466,44 @@ function onCart()
     }
 }
 
+const rangeInput = document.querySelectorAll(".range-input input");
+progress = document.querySelector(".frames .progress");
+priceInput = document.querySelectorAll(".price-input input");
+
+let priceGap = 500;
+
+priceInput.forEach(input =>{
+    input.addEventListener("input", a =>{
+        let minVal = parseInt(priceInput[0].value),
+        maxVal = parseInt(priceInput[1].value);
+        if((maxVal - minVal >= priceGap) && maxVal <= 4000){
+            if(a.target.className === "input-min"){
+                rangeInput[0].value = minVal;
+                progress.style.left = (minVal / rangeInput[0].max) * 100  + "%";
+            }else {
+                rangeInput[1].value = maxVal;
+                progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100  + "%";
+            }
+        }
+    });
+});
+
+rangeInput.forEach(input =>{
+    input.addEventListener("input", a =>{
+        let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+        if(maxVal - minVal < priceGap){
+            if(a.target.className === "range-min"){
+                rangeInput[0].value = maxVal - priceGap;
+            }else {
+                rangeInput[1].value = minVal + priceGap;
+            }
+        }else{
+            priceInput[0].value = minVal;
+            priceInput[1].value = maxVal;
+            progress.style.left = (minVal / rangeInput[0].max) * 100  + "%";
+            progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100  + "%";
+            console.log(minVal, maxVal)
+        }
+    });
+});

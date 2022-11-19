@@ -27,16 +27,15 @@
                 <a class="logo" href="index.html"><img src="assets/img/TECHBEATS.png" alt="logo"></a>
     
                 <ul>
-                    <li class="nav-button li-nav-home"><a href="index.html">home</a></li>
+                    <li class="nav-button li-nav-home"><a href="#">home</a></li>
                     <li class="nav-button li-nav-product"><a href="#">sản phẩm</a>
                         <div class="sub-menu">
                             <ul>
-                                <li><a href="#">laptop</a></li>
-                                <li><a href="#">phụ kiện</a></li>
+                                <li><a href="index.html?product">laptop</a></li>
+                                <li><a href="index.html?accessory">phụ kiện</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-button li-nav-about"><a href="#">about</a></li>
                     <li class="nav-button header__login" onclick="displayLogin();"><a>Đăng nhập</a></li>
                     <div class="header__has__login" style="display: none;" id="hasLogin">
                         <img src="./assets/img/avt.jpg" alt="">
@@ -49,18 +48,21 @@
                             <li class="has__login-item"><a href="#" id="logout" onclick="onLogOut();">Đăng xuất</a></li>
                         </ul>
                     </div>
-                    <li><a onclick="onCart();"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li class="header_cart">
+                        <i class="fa-solid fa-cart-shopping" onclick="onCart();" ></i>
+                        <span id="quantifyProductCart"></span>
+                    </li>
                 </ul>
             </nav>
         </header>
         <div class="modal__login">
-
+    
             <div class="modal__overlay" onclick="hideLogin();"></div>
-
+    
             <div class="modal__content">
                     
                 <div class="modal__content-heading">Login</div>
-                <form action="index.html" method="POST" id="form-login" role="form" name="login">
+                <form action="index.html" method="POST" id="form-login" role="form" name="login" onsubmit=" return displayLogin()">
                     <div class="modal__content-list">
                         <p id="errorLogin"></p>
                         <!-- <label for="username" class="modal__content-des">Username</label> -->
@@ -73,36 +75,36 @@
                         <input type="password" placeholder="Enter your password......" name="password" id="password" class="modal__content-item" onblur="hideErrorPass();">
                         <p id="errorPass"></p>
                     </div>
-
+    
                     <div class="modal__content-list" id="modal__email" style="display: none;">
                         <!-- <label for="password" class="modal__content-des">Email</label> -->
                         <input type="text" placeholder="Enter your email......" name="email" id="email" class="modal__content-item" onblur="hideErrorEmail();">
                         <p id="errorEmail"></p>
                     </div>
-
+    
                     <div class="modal__content-list">
                         <input type="button" name="button" value="LOGIN" class="modal__content-btn" id="login" onclick="onLogin();">   
                         <input type="button" name="button" value="REGISTER" class="modal__content-btn" style="display: none;" id="register" onclick="onRegister();"> 
                     </div>
                 
                     <!-- <p class="modal__content-login-other">or sign in with</p>
-
+    
                     <div class="modal__content-social">
                         <div class="modal__content-social-item"><i class="social-item fab fa-facebook"></i></div>
                         <div class="modal__content-social-item"><i class="social-item fab fa-telegram"></i></div>
                         <div class="modal__content-social-item"><i class="social-item fab fa-github"></i></div>
                     </div> -->
-
+    
                     <p class="modal__content-sign-up" id="modal-signup">Do not have an account?<a class="modal__content-sign-up-btn" id="signup" onclick="onSignUp();">Sign up</a></p>
                     <p class="modal__content-sign-up" style="display:none;" id="modal-signin">Do you already have an account?<a class="modal__content-sign-up-btn" id="signin" onclick="onSignIn();">Sign in</a></p>
-
+    
                     <div class="modal__content-btn-close" onclick="hideLogin();">
                         <i class="btn-close far fa-times-circle"></i>
                     </div>
                 </form>
-
+    
             </div>
-
+    
         </div>
 
         <div class="modal__add-product">

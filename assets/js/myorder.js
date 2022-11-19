@@ -251,7 +251,7 @@ function createProduct() {
                 prices: '1100',
                 type: "asus"
             },
-
+            
             {
                 id: "31",
                 img: 'keyboard1.png',
@@ -418,7 +418,6 @@ function createProduct() {
         arrProduct = JSON.parse(localStorage.getItem('product'));
     }
 }
-
 var arrCustomer = [];
 function createCustomer()
 {
@@ -432,16 +431,13 @@ function createCustomer()
                 password: 'admin',
                 email: 'lydatltd@gmail.com',
                 level: 0,
-                comment:[],
-                status:"Hoạt động"
+
             },
             {
                 user: 'datisekai',
                 password: 'bedatdz',
                 email: 'lydatltd@gmail.com',
                 level: 1,
-                comment:[],
-                status:"Hoạt động"
             }
         ];
         localStorage.setItem('customer',JSON.stringify(arrCustomer));
@@ -449,123 +445,10 @@ function createCustomer()
         arrCustomer = JSON.parse(localStorage.getItem('customer'));
     }
 }
-var arrBill = [];
-createBill();
-var billDetail = [];
-createBillDetail();
-var arrMyProduct = [];
-var arrCart = [];
-var userSession = sessionStorage.getItem('user');
-var userSale = JSON.parse(localStorage.getItem(userSession + 'sale')) || "";
-var valueSale = 0;
-var keySale = userSale.keySale;
-function createMyProduct()
-{
-    if(localStorage.getItem(userSession) != null)
-    {
-        arrCart = JSON.parse(localStorage.getItem(userSession));
-    }
-}
-createMyProduct();
-createProduct();
+
 createCustomer();
-
-function renderMyProduct(){
- 
-    var s = '';
-    
-    for (var index in arrCart){
-       
-            
-            s = s + '<tr> <td data-th="Product"> <div class="row">' + 
-                '<div class="col-sm-2"><img src="./assets/img/'+arrCart[index].img+'" alt="Sản phẩm 1" class="img-responsive" width="100">' +
-                    '</div> <div class="col-sm-10"> <h4 class="nomargin">'+arrCart[index].name+'</h4>' +
-                        '</p></div> </div> </td><td data-th="Price" class="text-center Price">'+arrCart[index].prices+'$</td> ' +
-                        '<td data-th="Quantity" class="quatify__icon"><div class="quatify__icon-item"><i class="btn-icon far fa-minus-square minus" onclick="minusOfProduct('+arrCart[index].id+')" style="cursor: pointer"></i>'+
-                            '<input class="form-control text-center-1 productx" type="text" readonly value="'+arrCart[index].quantify+'">' +
-                            '<i class="btn-icon far fa-plus-square plus productx" onclick="plusOfProduct('+arrCart[index].id+')" style="cursor: pointer"></i>' +
-                            '</div></td> <td data-th="Subtotal" class="text-center" id="sum_product">'+sumOfProduct(arrCart[index].prices,arrCart[index].quantify)+'$</td>'+
-                                '<td class="actions" data-th=""><button class="btn btn-info btn-sm" onclick="deleteProductOfCart('+index+')"><i class="far fa-trash-alt"></i></button>'+
-                                    '<button title = "'+arrCart[index].currentTime+'" class="btn btn-info-1 btn-sm"><i class="fas fa-calendar-times"></i></button></td>  </tr> ';                                                             
-        
-                                    }
-    document.getElementById('itemProduct').innerHTML = s;
-}
-function renderFooterProduct()
-{
-    var s = '<tr> <td><a href="index.html" class="btn  btn-warning" style="color:white; font-family:san-serif; font-size:15px;">Tiếp tục mua hàng</a></td><td colspan="1" class=""><input type="text" class="form" placeholder="Nhập vào mã giảm giá ........." id="txtsale">'+
-    '</td><td><button class="button_addsale" onclick="renderSale();">Sử dụng mã</button></td><td class=" text-center"><strong style="font-family:san-serif; font-size:16px; color:black;">Tổng tiền: '+totalProducts()+'$ </strong></td> <td onclick="onPay();"><a href="#" class="btn btn-success" style="color:white; font-family:san-serif; font-size:15px;">Thanh toán</a></td></tr> '; 
-    document.getElementById('footerProduct').innerHTML = s;
-}
-
-function totalProducts()
-{
-    var s = 0;
-    for (var index in arrCart)
-    {
-        s += (parseInt(arrCart[index].prices)*arrCart[index].quantify);
-    }
-    s = s*(1-valueSale);
-    return parseInt(s);
-}
-
-
-
-function uuid() {
-    var temp_url = URL.createObjectURL(new Blob());
-    var uuid = temp_url.toString();
-    URL.revokeObjectURL(temp_url);  
-    return uuid.substr(uuid.lastIndexOf('/') + 1); // remove prefix (e.g. blob:null/, blob:www.test.com/, ...)
-}
-
-
-function deleteProductOfCart(id)
-{
-    swal({
-        title: "Bạn có chắc chắn muốn xóa?",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) {
-            arrCart.splice(id,1);
-            localStorage.setItem(userSession,JSON.stringify(arrCart));
-            renderMyProduct();
-            renderFooterProduct();
-        }
-      });
-   
-}
-
-function renderSale()
-{
-    if(document.getElementById('txtsale').value!= "" && document.getElementById('txtsale').value == keySale)
-    {
-        swal({
-            title: "Bạn muốn sử dụng " + userSale.text,
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-                valueSale = parseFloat(userSale.valueSale);
-                renderFooterProduct();
-            }
-          });
-       
-    }else{
-        swal("Sử dụng mã thất bại!", "Không tìm thấy mã khuyến mãi này!", "error");
-        valueSale = 0;
-    }
-    renderFooterProduct();
-}
-
-function scrollSmoothToBottom() 
-{
-    window.scrollTo(0, document.body.scrollHeight);
-}
+createProduct();
+var arrBill = [];
 
 function createBill()
 {
@@ -595,141 +478,293 @@ function createBill()
     }
 }
 
-function createBillDetail()
+createBill();
+function searchInfo(id)
 {
-    if(localStorage.getItem('billdetail') == null)
+    txtSearch = document.getElementById(id).value;
+    if(txtSearch != '')
     {
-        billDetail = [
-            {
-                billID:arrBill[0].billID,
-                arrOrder: [{
-                    currentTime: "10:7 2/12/2021",
-                    id: "0",
-                    img: "iphone13.png",
-                    name: "IPHONE 13 pro max",
-                    prices: "1200",
-                    quantify: 1,
-                    status: "Đang xử lý",
-                    type: "macbook",
-                    user: "admin"
-                }],
-            }
-        ]
-        localStorage.setItem('billdetail',JSON.stringify(billDetail));
-    } else {
-         billDetail = JSON.parse(localStorage.getItem('billdetail'));
+        if(txtSearch.toUpperCase().indexOf('IPH') != -1)
+        {
+            window.location = 'index.html?product=iphone';
+        }
+        else if(txtSearch.toUpperCase().indexOf('IPA') != -1)
+        {
+            window.location = 'index.html?product=ipad';
+        }
+        else if(txtSearch.toUpperCase().indexOf('MAC') != -1)
+        {
+            window.location = 'index.html?product=macbook';
+        }
+        else {
+            renderEmptyProduct();
+        }
     }
 }
-function onPay()
+
+function scrollSmoothToBottom() 
+{
+    window.scrollTo(0, document.body.scrollHeight);
+}
+
+function preLoading()
+{
+    var preLoader = document.getElementById('preLoader');
+    window.addEventListener('load', hideLoading);
+}
+
+function hideLoading()
+{
+    setTimeout(function(){
+        preLoader.style.display = "none";
+    },0);
+}
+
+preLoading();
+
+function onCart()
+{
+    if(isLogin())
+    {
+        window.location = "cart.html";
+    } else{
+        displayLogin();
+    }
+}
+
+
+function displayLogin()
+{
+    document.querySelector('.modal__login').style.display = "block";
+}
+
+
+function displayLogin()
+{
+    document.querySelector('.modal__login').style.display = "block";
+}
+
+function hideLogin()
+{
+    document.querySelector('.modal__login').style.display = "none";
+    hideErrorUser();
+    hideErrorPass();
+    hideErrorEmail();
+}
+function onLogin()
+{
+    window.sessionStorage;
+    var admin = false;
+    var level = 1;
+    var username  = document.getElementById('username').value;
+    var password  = document.getElementById('password').value;
+    var flag = -1;
+    if(username == "")
+    {
+        document.getElementById('errorUser').textContent = "Username không được bỏ trống";
+        flag = 0;
+    }
+    if(password == "")
+    {
+        document.getElementById('errorPass').textContent = "Password không được bỏ trống";
+        flag = 0;
+    }
+    for(var index in arrCustomer)
+    {
+        if(arrCustomer[index].user.toUpperCase() == username.toUpperCase())
+        {
+            if(arrCustomer[index].status == "Bị khóa")
+            {
+                flag = -2;
+                break;
+            }
+        }
+    }
+
+    for (var i=0;i<arrCustomer.length;i++)
+    {
+        if (username.toUpperCase() == arrCustomer[i].user.toUpperCase() && password == arrCustomer[i].password && arrCustomer[i].status !="Bị khóa")
+        {
+            flag = 1;
+            if(arrCustomer[i].level == 0) {
+                level = arrCustomer[i].level; admin = true;
+            }
+            break;
+        }
+    }
+
+    if (flag==1){
+        sessionStorage.setItem('user',username);
+        sessionStorage.setItem('level',level)
+        hideLogin();
+        document.querySelector('.header__login').style.display = 'none';
+        document.getElementById('hasLogin').style.display = 'flex';
+        document.getElementById('userLogin').textContent = username;
+        swal("Đăng nhập thành công!", "Bạn đã có thể mua hàng!", "success");
+        hideErrorUser();
+        hideErrorPass();
+        hideErrorEmail();
+        if (admin == 1) document.getElementById('admin').style.display = "";
+        else {
+            document.getElementById('admin').style.display = "none";
+        }
+        
+    }
+    else if(flag == -1){
+        document.getElementById('errorLogin').textContent = "Username hoặc Password không chính xác!";
+    } 
+    else if(flag == -2)
+    {
+        document.getElementById('errorLogin').textContent = "Tài khoản của bạn đã bị khóa.";
+    }
+    
+}
+
+function hideErrorUser()
+{
+    document.getElementById('errorUser').textContent = "";
+    document.getElementById('errorLogin').textContent = "";
+}
+
+function hideErrorPass()
+{
+    document.getElementById('errorPass').textContent = "";
+    document.getElementById('errorLogin').textContent = "";
+}
+
+function hideErrorEmail()
+{
+    document.getElementById('errorEmail').textContent = "";
+}
+
+
+function onRegister()
+{
+    var username  = document.getElementById('username').value;
+    var password  = document.getElementById('password').value;
+    var email = document.getElementById('email').value;
+    var flag = 1;
+    if(username == "" || username.length < 5)
+    {
+        document.getElementById('errorUser').textContent = "Username phải lớn hơn 5 kí tự";
+        flag = 0;
+    }
+    if(password == "" || password.length < 5)
+    {
+        document.getElementById('errorPass').textContent = "Password phải lớn hơn 5 kí tự";
+        flag = 0;
+    }
+    if(email == "" || email.length < 5 || email.indexOf('@') == -1)
+    {
+        document.getElementById('errorEmail').textContent = "Email phải có @ và lớn hơn 5 kí tự";
+        flag = 0;
+    }
+    if(username != "" && password != "" && email != "")
+    {
+        for (var i=0;i<arrCustomer.length;i++)
+        {
+            if(username.toUpperCase() == arrCustomer[i].user.toUpperCase())
+            {
+                document.getElementById('errorLogin').textContent = "Username đã tồn tại";
+                flag = -1;
+                break;
+            }
+            if(email.toUpperCase() == arrCustomer[i].email.toUpperCase())
+            {
+                document.getElementById('errorLogin').textContent = "Email đã tồn tại";
+                flag = -1;
+                break;
+            }
+        }
+    }
+
+    if(flag == 1)
+    {
+        var customer = {
+            user: username,
+            password: password,
+            email: email,
+            level: 1
+           
+        };
+        arrCustomer.push(customer);;
+        swal("Đăng ký thành công!", "Vui lòng đăng nhập", "success");
+        onSignIn();
+        localStorage.setItem('customer',JSON.stringify(arrCustomer));
+        console.log(arrCustomer);
+    }
+
+}
+
+function checkSession()
+{
+    if(sessionStorage.getItem('user') != null)
+    {
+        document.querySelector('.header__login').style.display = 'none';
+        document.getElementById('userLogin').textContent = sessionStorage.getItem('user');
+        document.getElementById('hasLogin').style.display = 'flex';
+        document.querySelector('action__comment').style.display = 'block';
+    }
+    if(parseInt(sessionStorage.getItem('level')) == 0)
+    {
+        document.getElementById('admin').style.display = "";
+    }
+    else{
+        document.getElementById('admin').style.display = "none";
+    }
+}
+
+function isLogin()
+{
+    if(sessionStorage.getItem('user') != null) return true;
+    return false;
+}
+
+function onLogOut()
 {
     swal({
-        title: "Bạn chắc chắn muốn thanh toán?",
-        text: "Số tiền bạn phải trả là " + totalProducts() + "$",
+        title: "Bạn muốn đăng xuất?",
+        text: "Khi muốn mua hàng, bạn sẽ phải đăng nhập lại!",
         icon: "warning",
         buttons: true,
         dangerMode: true,
       })
       .then((willDelete) => {
         if (willDelete) {
-            var listOrder = [];
-            var date = new Date();
-            // var year = date.getFullYear();
-            var curDate = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-            for (var index in arrCart)
-            {
-                listOrder[index] = arrCart[index];
-                listOrder[index]["user"] = userSession;
-                listOrder[index]["status"] = "Đang xử lý";
-            }
-
-            var total = 0;
-            for (var index in arrCart)
-            {
-                total += parseInt(arrCart[index].prices) * parseInt(arrCart[index].quantify);
-            }
-
-            var billID = uuid();
-            var objBill = {
-                billID:billID,
-                arrOrder:listOrder,
-                user:userSession,
-                total:total,
-                curDate:curDate,
-                status:"Đang xử lý"
-            };
-
-            var objBillDetail = {
-                billID:billID,
-                arrOrder:listOrder
-            }
-          
-            arrCart = [];
-            localStorage.setItem(userSession,JSON.stringify(arrCart));
-            swal("Thanh toán thành công!", "Vui lòng chuẩn bị tiền để nhận hàng!", "success");
-            userSale = [];
-            localStorage.setItem(userSession + "sale",JSON.stringify(userSale));
-            arrBill.push(objBill);
-            billDetail.push(objBillDetail);
-            localStorage.setItem("listbill",JSON.stringify(arrBill));
-            localStorage.setItem("billdetail",JSON.stringify(billDetail));
-            renderMyProduct();
-            renderFooterProduct();
+            sessionStorage.removeItem('user');
+            sessionStorage.removeItem('level');
+            window.location = "index.html";
         }
-      });   
-}
-
-function plusOfProduct(id)
-{
-    for (var index in arrCart)
-    {
-        if(arrCart[index].id == id)
-        {
-            ++arrCart[index].quantify;
-            renderMyProduct(); 
-            renderFooterProduct();
-            break;
-        }
-    }
-    
+      });
     
 }
 
-function minusOfProduct(id)
-{
-    for (var index in arrCart)
-    {
-        if(arrCart[index].id == id)
-        {
-            if(arrCart[index].quantify > 1)
-            {
 
-                --arrCart[index].quantify;
-                renderMyProduct(); 
-                renderFooterProduct();
-                break;
-            }
-        }
-    }
-  
+function onSignUp()
+{
+    document.querySelector('.modal__content-heading').textContent = "REGISTER";
+    document.getElementById('modal__email').style.display = "block";
+    document.getElementById('register').style.display = "";
+    document.getElementById('login').style.display = "none";
+    document.getElementById('modal-signup').style.display = "none";
+    document.getElementById('modal-signin').style.display = "";
+   
+    hideErrorEmail();
+    hideErrorPass();
+    hideErrorUser();
 }
 
-
-function sumOfProduct(a,b)
+function onSignIn()
 {
-   return parseInt(a)*parseInt(b);
-}
-
-function sumOfProducts(a,b,value)
-{
-    return (a+b)*value;
-}
-
-window.onload = function()
-{
-    renderMyProduct();
-    renderFooterProduct();
-    checkSession();
-
+    document.querySelector('.modal__content-heading').textContent = "LOGIN";
+    document.getElementById('modal__email').style.display = "none";
+    document.getElementById('register').style.display = "none";
+    document.getElementById('login').style.display = "";
+    document.getElementById('modal-signup').style.display = "";
+    document.getElementById('modal-signin').style.display = "none";
+    hideErrorEmail();
+    hideErrorPass();
+    hideErrorUser();
 }
 
 function isLogin()
@@ -755,42 +790,6 @@ function checkSession()
     }
 }
 
-function onLogOut()
-{
-    swal({
-        title: "Bạn muốn đăng xuất?",
-        text: "Khi muốn mua hàng, bạn sẽ phải đăng nhập lại!",
-        icon: "warning",
-        buttons: true,
-        dangerMode: true,
-      })
-      .then((willDelete) => {
-        if (willDelete) {
-            sessionStorage.removeItem('user');
-            sessionStorage.removeItem('level');
-            window.location = "index.html";
-        }
-      });
-    
-}
-
-
-function preLoading()
-{
-    var preLoader = document.getElementById('preLoader');
-    window.addEventListener('load', hideLoading);
-}
-
-function hideLoading()
-{
-    setTimeout(function(){
-        preLoader.style.display = "none";
-    },0);
-}
-
-preLoading();
-
-//xuly modal bar
 function displayModalBars()
 {
     document.getElementById('barsOverlay').style.display = "block";
@@ -816,33 +815,145 @@ function hideCategoryBars()
     document.getElementById('barCategoryClose').style.display = "none";
 }
 
-function searchInfo(id)
-{
-    txtSearch = document.getElementById(id).value;
-    if(txtSearch != '')
-    {
-        if(txtSearch.toUpperCase().indexOf('IPH') != -1)
-        {
-            window.location = 'index.html?product=iphone';
-        }
-        else if(txtSearch.toUpperCase().indexOf('IPA') != -1)
-        {
-            window.location = 'index.html?product=ipad';
-        }
-        else if(txtSearch.toUpperCase().indexOf('MAC') != -1)
-        {
-            window.location = 'index.html?product=macbook';
-        }
-        else {
-            renderEmptyProduct();
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
         }
     }
 }
 
-
-function renderEmptyProduct()
-{
-    document.getElementById('display_product').innerHTML = '<div id="errorSearch">Không tìm thấy sản phẩm</div>'
+window.onload = () =>{
+    checkSession();
+    renderOrderMobile();
+    renderMyOrder();
 }
 
-console.log(arrCart)
+
+
+function hideModalDetail()
+{
+    document.querySelector('.modal__detail-bill').style.display = "none";
+}
+
+function renderMyOrder()
+{
+    var arrMyOrder = [];
+    for (var index in arrBill)
+    {
+        if(arrBill[index].user == sessionStorage.getItem('user'))
+        {
+            arrMyOrder.push(arrBill[index]);
+        }
+    }
+    var listOrder = arrMyOrder.map((order,index) =>{
+        return `   <div class="container__order-product-view-content">
+        <div class="container__order-product-view-content-id">
+            <p>${index}</p>
+        </div>
+
+        <div class="container__order-product-view-content-time">
+            <p>${order.curDate}</p>
+        </div>
+
+        <div class="container__order-product-view-content-bill">
+            <button onclick="displayModalDetail('${order.billID}')">Xem chi tiết</button>
+        </div>
+
+        <div class="container__order-product-view-content-status">
+            <p>${order.status}</p>
+        </div>
+    </div>`;
+    })
+    var htmls = listOrder.join('');
+    document.querySelector('.container__order-product-view').innerHTML = htmls;
+}
+
+function displayModalDetail(billID)
+{
+    document.querySelector('.modal__detail-bill').style.display = "block";
+    renderModalOrder(billID);
+}
+
+function renderModalOrder(billID)
+{
+    var objOrder;
+    for (var index in arrBill)
+    {
+        if(arrBill[index].billID == billID)
+        {
+            objOrder = arrBill[index];
+            break;
+        }
+    }
+
+    document.querySelector('.modal__detail-bill-id').innerHTML = ` <p>Mã đơn hàng: ${objOrder.billID}`;
+    var arrOrder = objOrder.arrOrder;
+    var listOrder = arrOrder.map((order,index)=>{
+        return `<div class="modal__detail-product-view">
+    
+        <div class="modal__detail-bill-product-id">
+            <p>${index}</p>
+        </div>
+
+        <div class="modal__detail-bill-product-name">
+            <p>${order.name}</p>
+        </div>
+
+        <div class="modal__detail-bill-product-img">
+            <img src="./assets/img/${order.img}" alt="">
+        </div>
+
+        <div class="modal__detaill-bill-product-prices">
+            <p>${order.prices}$</p>
+        </div>
+
+        <div class="modal__detaill-bill-product-quantify">
+            <p>${order.quantify}</p>
+        </div>
+    </div>`;
+    });
+
+    var arrPrices = arrOrder.map(order => (order.prices));
+    var total = arrPrices.reduce((pre,cur) => parseInt(pre) + parseInt(cur),0)
+    var htmls = listOrder.join('');
+    document.querySelector('.modal__detail-bill-product-content').innerHTML = htmls;
+    document.querySelector('.modal__detail-bill-product-time').innerHTML = ` <p>Thời gian đặt hàng: ${objOrder.curDate}</p>`;
+    document.querySelector('.modal__detail-bill-product-total').innerHTML = ` <p>Tổng tiền : ${objOrder.total}$</p>`;
+}
+
+function renderOrderMobile()
+{
+    var arrMyOrder = [];
+    for (var index in arrBill)
+    {
+        if(arrBill[index].user == sessionStorage.getItem('user'))
+        {
+            arrMyOrder.push(arrBill[index]);
+        }
+    }
+    var listOrder = arrMyOrder.map((order,index) => {
+        return `     <div class="container__order-product-view-mobile-content">
+        <div class="container__order-product-view-mobile-id">
+            <p><i class="fas fa-indent"></i> STT: <span>${index}</span></p>
+        </div>
+
+        <div class="container__order-product-view-mobile-time">
+            <p><i class="fas fa-history"></i> Thời gian: <span>${order.curDate}</span></p>
+        </div>
+
+        <div class="container__order-product-view-mobile-bill">
+            <p><i class="fas fa-money-bill"></i> Hóa đơn: <button onclick= "displayModalDetail('${order.billID}')">Xem chi tiết</button></p>
+        </div>
+
+        <div class="container__order-product-view-mobile-status">
+            <p><i class="fas fa-battery-half"></i> Tình trạng: <span>${order.status}</span></p>
+        </div>
+    </div>`;
+    });
+    var htmls = listOrder.join('');
+    document.querySelector('.container__order-product-view-mobile').innerHTML = htmls;
+}

@@ -30,16 +30,16 @@
             <a class="logo" href="index.html"><img src="assets/img/TECHBEATS.png" alt="logo"></a>
 
             <ul>
-                <li class="nav-button li-nav-home"><a href="index.html">home</a></li>
+                <li class="nav-button li-nav-home"><a href="#">home</a></li>
                 <li class="nav-button li-nav-product"><a href="#">sản phẩm</a>
                     <div class="sub-menu">
                         <ul>
-                            <li><a href="?product">laptop</a></li>
-                            <li><a href="?accessory">phụ kiện</a></li>
+                            <li><a href="index.html?product">laptop</a></li>
+                            <li><a href="index.html?accessory">phụ kiện</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-button li-nav-about"><a href="#">about</a></li>
+                <li class="nav-button li-nav-about" onclick="scrollSmoothToBottom();"><a>about</a></li>
                 <li class="nav-button header__login" onclick="displayLogin();"><a>Đăng nhập</a></li>
                 <div class="header__has__login" style="display: none;" id="hasLogin">
                     <img src="./assets/img/avt.jpg" alt="">
@@ -150,40 +150,6 @@
             </div>
         </div>
     </div>
-    <div class="modal__bars">
-        <div class="modal__bars-overlay" id="barsOverlay" onclick="hideModalBars();"></div>
-
-        <div class="modal__bars-content" id="barsContent">
-            <div class="bars-close" id="barsClose" onclick="hideModalBars();">
-                <i class="bars-close-btn fas fa-times"></i>
-            </div>
-
-            <div class="bars-search">
-                <input type="text" placeholder="Search something...." onchange="searchInfo('txtsearch2');" id="txtsearch2">
-            </div>
-
-            <div class="bars-category">
-                <ul class="bars__list">
-                    <a href="index.html">
-
-                        <li class="bars__list-item">Home</li>
-                    </a>
-                    <!-- <a href="cart.html">
-
-                        <li class="bars__list-item">Cart</li>
-                    </a> -->
-                    <li class="bars__list-item" id="barsCategory" onclick="displayCategoryBars();">Category</li>
-                    <span style="display: none;" id="barCategoryClose" onclick="hideCategoryBars();"><i class="fas fa-window-close"></i></span>
-                    <ul class="bars-item-list" id="barsCategoryItem">
-                        <a href="?product=apple"><li class="bars-item-list-item">APPLE</li></a>
-                        <a href="?product=dell"><li class="bars-item-list-item">DELL</li></a>
-                        <a href="?product=asus"><li class="bars-item-list-item">ASUS</li></a>
-                        
-                    </ul>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="slider">
         <div class="slides">
            
@@ -217,20 +183,40 @@
                             <a href="?accessory=keyboard"><li class="menu__list-item" id="iphone">KEYBOARD</li></a>
                             <a href="?accessory=mouse"><li class="menu__list-item" id="ipad">MOUSE</li></a>
                         </ul>
-                    </div>
-                    <div class="img-pr" style="background-image: url('./assets/img/img-pr.png');">
+                        <div class="menu__heading">Price Range</div>
+                        <div class="price-input">
+                            <div class="field">
+                                <input type="number" class="input-min" id="input-min" value="0">    
+                            </div>
+                            <div class="separator">-</div>
+                            <div class="field">
+                                <input type="number" class="input-max" id="input-max" value="4000">    
+                            </div>
+                        </div>
+                        <div class="frames">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="4000" value="0" step="100">
+                            <input type="range" class="range-max" min="0" max="4000" value="4000" step="100">
+                        </div>
+                        <div class="filter">
+                            <div onclick="filterrange();">
+                                <input type="submit">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col l-10 m-12 c-12" >
                         
                         <div class="header__search hide-on-tablet" id="header__search">
-                            <div class="header__search-input">
-                                <input type="text" placeholder="Search something........." class="search-input" id="txtsearch" onchange="searchInfo('txtsearch');">
-                            </div>
-                            
-                            <div class="header__search-btn" onclick="searchInfo('txtsearch');">
-                                <i class="search-btn fas fa-search"></i>
-                            </div>
+                                <div class="header__search-input">
+                                    <input type="text" placeholder="Search something........." class="search-input" id="txtsearch" onchange="searchInfo('txtsearch');">
+                                </div>
+                                
+                                <div class="header__search-btn" onclick="searchInfo('txtsearch');">
+                                    <i class="search-btn fas fa-search"></i>
+                                </div>
                         </div>
         
                         <div class="select__search">
